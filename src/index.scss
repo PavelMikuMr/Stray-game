@@ -5,3 +5,6 @@
 @import 'styles/_base';
 @import 'styles/_style';
 @import 'styles/_media';
+
+// import all additional styles in SCSS, not in JS
+@import 'swiper/swiper.min.css';

@@ -1,32 +1,32 @@
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
+const path = require('path');
+const PugPlugin = require('pug-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-let mode = process.env.NODE_ENV || 'development'
-const isDev = mode === 'development'
-const isProd = !isDev
-const devtool = isDev ? 'source-map' : undefined
-console.log(mode)
+let mode = process.env.NODE_ENV || 'development';
+const isDev = mode === 'development';
+const isProd = !isDev;
+const devtool = isDev ? 'source-map' : undefined;
+console.log(mode);
 
 // Optimization for js/ts
 const babelOptions = (preset) => {
   const opts = {
     preset: ['@babel/preset-env'],
-  }
+  };
   if (preset) {
-    opts.presets.push(preset)
+    opts.presets.push(preset);
   }
-  return opts
-}
+  return opts;
+};
 
 module.exports = {
   mode: mode,
   devtool,
   // entry point from where the data will be collected
-  // app is such name will be generated in folder dist
+  // define your Pug files here
+  // JS and CSS files will be extracted from their sources loaded in Pug
   entry: {
-    app: path.resolve(__dirname, 'src', 'index.js'),
+    index: './src/index.pug', // => dist/index.html
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -51,27 +51,21 @@ module.exports = {
     //     },
     //   ],
     // }),
-    new MiniCssExtractPlugin({
-      filename: '[name].css',
-    }),
-    new HtmlWebpackPlugin({
-      title: 'Stray',
-      template: './src/index.pug',
-      minify: {
-        collapseWhitespace: isProd,
+
+    // enable processing of Pug files in Webpack entry
+    new PugPlugin({
+      pretty: !isProd, // pretty formatting generated HTML (for prod mode should be false)
+      // extract CSS from SCSS files loaded in Pug
+      extractCss: {
+        filename: '[name].[contenthash].css', // output hashed filename of CSS
       },
     }),
   ],
   module: {
     rules: [
       {
-        test: /\.html$/i,
-        loader: 'html-loader',
-      },
-      {
         test: /\.(c|sa|sc)ss$/i,
         use: [
-          isProd ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',
           {
             loader: 'postcss-loader',
@@ -104,8 +98,14 @@ module.exports = {
       },
       {
         test: /\.pug$/,
-        loader: 'pug-loader',
         exclude: /(node_modules|bower_components)/,
+        loader: PugPlugin.loader, // Pug loader
+        options: {
+          // pass global data into all Pug files
+          data: {
+            title: 'Stray',
+          },
+        },
       },
       {
         test: /\.(ttf|woff2?)$/i,
@@ -126,4 +126,18 @@ module.exports = {
       },
     ],
   },
-}
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
+    open: true, // open browser
+    compress: true,
+    // enable HMR for files defined in paths
+    watchFiles: {
+      paths: ['src/**/*.*'],
+      options: {
+        usePolling: true,
+      },
+    },
+  },
+};

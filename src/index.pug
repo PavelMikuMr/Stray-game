@@ -3,9 +3,9 @@ extends ./pug/layout/layout
 block variables
     - var pageTitle = 'Stray'
     mixin divBg(path)
-        div(style= "background-image:url(" +`${require("@/img/"+path)}` +")")&attributes(attributes)
+        div(style= "background-image:url(" + require("@/img/"+path) +")")&attributes(attributes)
     mixin imgBg(path)
-        img(src=`${require("@/img/"+path)}`, alt="")&attributes(attributes)
+        img(src=require("@/img/"+path) alt="")&attributes(attributes)
 
 
 block content
@@ -21,4 +21,6 @@ block content
     include ./pug/blocks/sidebar
 
 
-block scripts 
+block scripts
+    //- load source scripts in Pug via require()
+    script(src=require("@/index.js"))
