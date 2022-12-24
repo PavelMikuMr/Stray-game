@@ -1,5 +1,7 @@
 # Stray game
 
+![Version](https://img.shields.io/npm/v/npm)
+
 ### The small site of my favorite game
 
 ### Buzness
