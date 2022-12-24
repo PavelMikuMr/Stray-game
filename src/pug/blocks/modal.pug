@@ -1,0 +1,31 @@
+include ../mixins/_cork
+.modal 
+  .modal-wrapper
+    .modal-content 
+      .modal-title STRAY
+      .modal-version 
+      form.form
+        .form-group.full 
+          label(for="card") Credit Card: 
+          input(type="text" required placeholder="0000 0000 0000 0000" id="card")
+        .form-group 
+          label(for="expire") EXPIRE: 
+          input(type="text" required placeholder="mm/yy" id="expire")
+        .form-group 
+          label(for="ccv") ccv:
+          input(type="password" required placeholder="***" id="card")
+        .form-group.full 
+          label(for="instant") INSTANT:
+          input(type="text" required placeholder="Ryan Smith" id="instant")
+        .form-checkbox.flex.flex-center
+          input(type="checkbox" name="agreement" id="agreement" required)
+          span.check
+          label(for="agreement")  
+            |I agree with the #[span.red rules] of the site
+        .modal-description Download of this product is subject to the PlayStation Network Terms of Service and our Software Usage Terms plus any specific additional conditions applying to this product. If you do not wish to accept these terms, do not download this product. See Terms of Service for more important information.
+        .modal-total.flex.flex-center
+          .modal-total__text your total summa
+          .modal-total__price 
+        button.modal-submit.buy-button(type="submit" data-value="6") buy now
+        .modal-close ×
+.overlay

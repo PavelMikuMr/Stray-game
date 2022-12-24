@@ -1,0 +1,42 @@
+include ../mixins/_cork
+section.section.hidden.section-news#news
+  h2(data-text="news") News
+  .news.swiper.flex.flex-center(style="z-index:0;")
+    .swiper-wrapper
+      .swiper-slide.news-item
+        .news-item__info.flex
+          .news-item__subtitle Stray
+          .news-item__date 19/07/2022
+        .news-item__title(data-text="newsTitle1") Review Roundup For Stray
+        .news-item__description.flex.flex-center
+          +divBg("news-1.png")(class="news-item__img")
+          .news-item__text.flex
+            p(data-text="newsSubTitle1")
+              |Stray is the tale of a small cat who falls into a subterranean city inhabited entirely by robots. The titular stray will befriend a drone, explore small hub worlds, and solve puzzles with their feline brain as it seeks to make its way back home...
+            a.news-item__button(href="#") read 
+      .swiper-slide.news-item
+        .news-item__info.flex
+          .news-item__subtitle Stray
+          .news-item__date 19/07/2022
+        .news-item__title(data-text="newsTitle2") Cyberpunk Cat Game Stray Coming July 19
+        .news-item__description.flex.flex-center
+          +divBg("news-2.png")(class="news-item__img")
+          .news-item__text.flex
+            p(data-text="newsSubTitle2") Will Be Free Through PlayStation Plus' Higher Tiers. Stray, the highly-anticipated cyberpunk adventure game in which players take on the role of backpack-wearing cat working its way through a robot-infested city, now has a release date. Originally slated for release in "early 2022," the game officially hits PlayStation 5, PlayStation 4, and PC on July 19. Stray will also be the first day one release for the new and improved PlayStation Plus subscription service, meaning those subscribed to PS+ at its highest tiers will have access to the game without needing to purchase it...
+            a.news-item__button(href="#") read 
+      .swiper-slide.news-item
+        .news-item__info.flex
+          .news-item__subtitle Stray
+          .news-item__date 19/07/2022
+        .news-item__title(data-text="newsTitle3") Stray Is (Naturally) A Big Hit With Cats
+        .news-item__description.flex.flex-center
+          +divBg("news-3.png")(class="news-item__img")
+          .news-item__text.flex
+            p(data-text="newsSubTitle3") Stray has officially arrived today, giving fans an opportunity to play as a digital version of nature's perfect purring machine. As the titular stray cat lost in a strange city inhabited by robots, it'll be up to you to help the feline find its way home and avoid crossing paths with merciless androids. To celebrate the launch of Stray, people have taken to social media to show off their own household cats just before they start playing. From mischievous kittens to chonky big boys, Twitter alone is full of four-legged Stray fans. Several GameSpot staff members have shared pictures of their own cats observing Stray in action, and we've rounded up a few more below...
+            a.news-item__button(href="#") read 
+    .swiper-button-prev.swiper-button.flex.flex-center
+      <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28"><path d="M18.72,8.72,13.43,14l5.29,5.28-1.63,1.63L10.17,14l6.92-6.91Z"/></svg>
+    .swiper-button-next.swiper-button.flex.flex-center
+      <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28"><path d="M10.17,19.28,15.46,14,10.17,8.72,11.8,7.09,18.72,14,11.8,20.91Z"/></svg>
+
+

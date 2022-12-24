@@ -1,0 +1,40 @@
+include ../mixins/_cork
+footer.footer 
+  .container
+    .footer-top.flex
+      ul.footer-menu.flex.flex-center
+        li
+          a.menu-link(href="#editions" data-text="editions" ) editions
+        li
+          a.menu-link(href="#controller" data-text="controller" ) controller
+        li
+          a.menu-link(href="#about" data-text="about" ) about
+        li
+          a.menu-link(href="#explore" data-text="explore" ) explore
+        li
+          a.menu-link(href="#news" data-text="news") news
+        li
+          a.menu-link(href="#faq" data-text="faq") faq
+      .footer-lang.flex
+        span Language 
+        .footer-lang__list
+          .footer-lang__current(data-text="currentLang" )
+            |english
+          .footer-lang__content
+            .footer-lang__item Russian
+            .footer-lang__item English
+    .footer-info(data-text="footerInfo" )
+      |Download of this product is subject to the PlayStation Network Terms of Service and our Software Usage Terms plus any specific additional conditions applying to this product. If you do not wish to accept these terms, do not download this product. See Terms of Service for more important information.
+    .footer-icon
+      .footer-icon__company
+        ul.footer-icon__list
+          li.footer-icon__item
+            a(href="https://annapurnainteractive.com") 
+              +imgBg("logo-annapurna.png")
+          li.footer-icon__item
+            a(href="http://hk-devblog.com") 
+              +imgBg("logo-b12.png")
+    .footer-year 2022
+    .footer-rights 
+      |Developed by #[span Pavel Miku]. All rights reserved
+

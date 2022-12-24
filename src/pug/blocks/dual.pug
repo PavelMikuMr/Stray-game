@@ -1,0 +1,14 @@
+include ../mixins/_cork
+section.section.hidden.section-dual#controller
+  .container 
+    h2(data-text="сontrollerTiltle") DualSense
+    .dual.flex.flex-center 
+      .dual-description
+        p(data-text="descController1") You can also buy an exclusive controller for PS5 with the game 
+          span hello kitty
+        p(data-text="descController2") If you purchase a controller and a game (any edition), you will receive a #[span.orange 15%] discount on two items.
+        .dual-description__info.flex
+          .dual-description__price 35.99$
+          .dual-description__button.buy-button(data-value="7" data-text="buyGame") buy dualsense with a game
+      .dual-img
+        img(src=require("@/img/dual.png"), alt="controller")

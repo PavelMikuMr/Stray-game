@@ -1,0 +1,17 @@
+# Using mixins with the atributes
+mixin link(href, name)
+  a(href=href)&attributes(attributes)= name
+
++link('/foo', 'foo')(class="btn") => 
+<a class="btn" href="/foo">foo</a>
+
+Interpolation (str = pugTemplate - (variable) btn = variable)
+1) (вставка элемента в тег) h5.portfolio__numbers-item 305 #[span Web Design]
+
+2) (``+ = expression) : p= str `and content`    button(class=`btn__`+ btn)
+button.portfolio__btn(data-filter=`.category-`+ filter)= content
+
+3) (`${placeholder}`) = img(src=require(`@/img/portfolio/${image}.jpg`) alt="portfolio image")
+
+4) (#{string interpolation}) : p#{str} and content
+	li(class= `pricing__item-${key}`) #[sup $] #{item}

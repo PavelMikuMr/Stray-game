@@ -1,0 +1,9 @@
+include ../mixins/_cork
+section.section.hidden.section-about#about
+  h2(data-text="about")  About Game
+  .video
+    .video-info
+      .video-title(data-text="aboutTitle") Watch the Trailer
+      .video-btn PLAY
+    video#video( src=require("@/img/video-stray.mp4") poster=require("@/img/video-bg.png"))
+    

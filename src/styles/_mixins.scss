@@ -1,0 +1,54 @@
+@mixin size($width, $height) {
+  width: $width + px;
+  height: $height + px;
+}
+
+@mixin button($bg: $violet) {
+  background: $bg;
+  border-radius: 6px;
+  padding: 12px 36px;
+  font-weight: 500;
+  line-height: 19px;
+  color: $white;
+  display: flex;
+  width: max-content;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.25s;
+}
+
+@mixin hoverViolet {
+  &:hover {
+    background: #9468da;
+  }
+  &:active {
+    background: #6039a0;
+  }
+}
+@mixin hoverOrange {
+  &:hover {
+    background: #f8625a;
+  }
+  &:active {
+    background: #a4221c;
+    background: #9c5fff;
+  }
+}
+
+@mixin bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@mixin font($weight, $size, $height) {
+  font-weight: $weight;
+  font-size: $size + px;
+  line-height: $height + px;
+}
+
+@mixin center {
+  // position's needed here
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

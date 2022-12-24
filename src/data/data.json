@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "href": "/home",
+      "text": "HOUSE"
+    },
+    {
+      "href": "/women",
+      "text": "women"
+    },
+    {
+      "href": "/man",
+      "text": "man"
+    },
+    {
+      "href": "/other",
+      "text": "other"
+    },
+    {
+      "href": "/pur",
+      "text": "pur"
+    },
+    {
+      "href": "/sale",
+      "text": "buy now"
+    }
+  ]
+}

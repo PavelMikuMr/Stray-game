@@ -1,0 +1,23 @@
+//- 1 вариант
+-const logo = require("@/data/logo.json")
+
+.clients 
+	.container 
+		ul.clients__list 
+			each val in ["1","2","3","4","5"]
+				li
+					img(src=require(`@/img/clients/${val}.png`) alt=`img-${val}`)
+.connection
+	.container 
+		h2.title.connection__title Get in Touch
+		form.form
+			input(type="text" placeholder="ИМЯ")
+			input(type="text" placeholder="EMAIL")
+			textarea(placeholder="ВАШЕ СООБЩЕНИЕ")
+			button(type='submit') ОТПРАВИТЬ 
+//- 2 вариант
+
+      table.info__table
+        -const table_list = require("@/data/table.json")
+        each item in table_list
+          +table(item.step,item.country,item.date)

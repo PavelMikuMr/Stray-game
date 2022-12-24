@@ -1,0 +1,66 @@
+include ../mixins/_cork
+section.section.hidden.section-explore#explore  
+  .container 
+    h2.explore-title#title-explore(data-text="exploreTitle")  Explore #[span Stray] series
+    .explore-items
+      .explore-item
+        h3(data-text="requirementsPc")  Here are (PC) System Requirements
+        .explore-switch.flex.flex-center
+          .explore-switch__title.active(data-requirements="minimum" data-text="minimumPc") Minimum
+          .explore-switch__checkbox
+            input(type="checkbox", name="requirements" class="checkbox")
+            span
+          .explore-switch__title(data-requirements="recommended" data-text="recommendedPc") Recommended
+        .explore-info.flex.flex-center
+          .explore-img
+            .explore-img__wrap.req-1(style=`background-image: url(`+`${require("@/img/reqbg-1.png")}`+")")
+              img(src=require("@/img/req-1.png"), alt="child")
+          .explore-description 
+            ul.explore-list.active#minimum
+              li #[span.violet CPU ]: Intel i5-2300 or AMD FX-6350
+              li #[span.violet RAM ]: 8 GB
+              li #[span.violet OS ]: Windows 10 64-bit
+              li #[span.violet VIDEOCARD ]: NVIDIA GeForce GTX 650 Ti, 2 GB  or AMD Radeon R7 360, 2 GB
+              li #[span.violet DirectX] : Version 12
+              li #[span.violet VERTEX SHADER ] : 5.0
+              li #[span.violet FREE DISK SPACE ] : 10 GB
+              li #[span.violet DEDICATED VIDEO RAM ] : 2048 MB
+            ul.explore-list#recommended
+              li #[span.violet CPU ] : Intel Core i5-8400 or AMD Ryzen 5 2600
+              li #[span.violet RAM ] : 8 GB
+              li #[span.violet OS ] : Windows 10 64-bit
+              li #[span.violet VIDEOCARD ] : NVIDIA GeForce GTX 780, 3 GB or AMD Radeon R9 290X, 4 GB
+              li #[span.violet DirectX] : Version 12
+              li #[span.violet VERTEX SHADER ] : 5.0
+              li #[span.violet FREE DISK SPACE ] : 10 GB
+              li #[span.violet DEDICATED VIDEO RAM ] : 3 GB (AMD 4GB)
+            .explore-button.buy-button(data-value="4" data-text="buy" ) buy now 
+      .explore-item
+        h3(data-text="PStitle") #[span Stray] for PS4
+        .explore-switch.flex.flex-center
+          .explore-switch__title.active(data-versions="standard" data-text="PsRequirementStandard") Standard
+          .explore-switch__checkbox
+            input(type="checkbox", name="versions" class="checkbox")
+            span
+          .explore-switch__title(data-versions="limited" data-text="PsRequirementLimited") Limited
+        .explore-item__price 15.99$
+        .explore-info.flex.flex-center.reverse
+          .explore-img
+            .explore-img__wrap.req-2(style=`background-image: url(`+`${require("@/img/reqbg-2.png")}`+")")
+              img(src=require("@/img/req-2.png"), alt="father")
+          .explore-description 
+            ul.explore-list.active#standard
+              li #[span.violet Platform] : PS4
+              li #[span.violet Premiere] : 19.7.2022
+              li #[span.violet Publisher] : ANNAPURNA INTERACTIVE
+              li #[span.violet Species]: Action, Adventure
+              li #[span.violet Voice] : English
+              li #[span.violet Display languages] : English
+            ul.explore-list#limited
+              li #[span.violet Platform] : PS4, PS5
+              li #[span.violet Premiere] :19.7.2022
+              li #[span.violet Publisher] : ANNAPURNA INTERACTIVE
+              li #[span.violet Species] : Action, Adventure
+              li #[span.violet Voice] : English, Polish, Russian etc.
+              li #[span.violet Display languages] : English,Dutch, Polish, Russian, Turkish etc.
+            .explore-button.buy-button(data-value="5" data-text="buy" ) buy now 

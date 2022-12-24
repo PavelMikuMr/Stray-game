@@ -1,0 +1,24 @@
+extends ./pug/layout/layout
+
+block variables
+    - var pageTitle = 'Stray'
+    mixin divBg(path)
+        div(style= "background-image:url(" +`${require("@/img/"+path)}` +")")&attributes(attributes)
+    mixin imgBg(path)
+        img(src=`${require("@/img/"+path)}`, alt="")&attributes(attributes)
+
+
+block content
+    include ./pug/blocks/header
+    include ./pug/blocks/editions
+    include ./pug/blocks/dual
+    include ./pug/blocks/about
+    include ./pug/blocks/explore
+    include ./pug/blocks/news
+    include ./pug/blocks/faq
+    include ./pug/blocks/footer
+    include ./pug/blocks/modal
+    include ./pug/blocks/sidebar
+
+
+block scripts 

@@ -1,0 +1,101 @@
+:root {
+  font-size: 16px;
+  --transition-speed: 600ms;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Rubik', Roboto sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  color: $white;
+  overflow-x: hidden;
+  background: $main;
+
+  &::-webkit-scrollbar {
+    width: 0.15rem;
+  }
+  &::-webkit-scrollbar-track {
+    background: #1e1e24;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #6649b8;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+input,
+button {
+  border: none;
+  background: none;
+  outline: none;
+  color: $white;
+  font-size: 16px;
+  font-family: 'Rubik', Roboto sans-serif;
+}
+
+a {
+  color: $white;
+}
+
+.container {
+  width: 1420px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+/* Utility */
+.none {
+  display: none !important;
+}
+
+.visually-hidden {
+  opacity: 0;
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+  display: block;
+  margin-left: -10000px;
+  background: transparent;
+  font-size: 0;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 47px;
+  color: $white;
+  text-align: center;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.violet {
+  color: $violet;
+}
+.orange {
+  color: $orange;
+}

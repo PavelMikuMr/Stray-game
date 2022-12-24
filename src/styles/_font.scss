@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'Rubik';
+  src: url('@/fonts/Rubik/Rubik-Regular.woff2'),
+    url('@/fonts/Rubik/Rubik-Regular.woff'),
+    url('@/fonts/Rubik/Rubik-Regular.ttf');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('fonts/Rubik/Rubik-Medium.woff2'),
+    url('fonts/Rubik/Rubik-Medium.woff'), url('fonts/Rubik/Rubik-Medium.ttf');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('fonts/Rubik/Rubik-Bold.woff2'), url('fonts/Rubik/Rubik-Bold.woff'),
+    url('fonts/Rubik/Rubik-Bold.ttf');
+  font-weight: bold;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter/Inter-Regular.woff2'),
+    url('fonts/Inter/Inter-Regular.woff'), url('fonts/Inter/Inter-Regular.ttf');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Commune-Nuit';
+  src: url('fonts/Commune/Commune-Nuit-Debout.woff2'),
+    url('fonts/Commune/Commune-Nuit-Debout.woff');
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Oxygen';
+  src: url('fonts/Oxygen/oxygenmono-regular-webfont.woff2'),
+    url('fonts/Oxygen/oxygenmono-regular-webfont.woff');
+  font-display: swap;
+  font-style: normal;
+}

@@ -1,0 +1,53 @@
+{
+  "name": "webpack-starter",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack serve --mode development --open",
+    "dev": "cross-env NODE_ENV=development webpack --mode development",
+    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "clear": "rd /s /q dist"
+  },
+  "browserslist": "> 0.25%, not dead",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.2",
+    "css-minimizer-webpack-plugin": "^4.2.2",
+    "file-loader": "^6.2.0",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "image-webpack-loader": "^8.1.0",
+    "jsdom-quokka-plugin": "^1.0.16",
+    "mini-css-extract-plugin": "^2.6.1",
+    "mixitup": "^3.3.1",
+    "postcss": "^8.4.19",
+    "postcss-loader": "^7.0.1",
+    "postcss-preset-env": "^7.8.3",
+    "pug": "^2.0.4",
+    "pug-loader": "^2.4.0",
+    "pug-plugin": "^4.5.0",
+    "sass": "^1.56.1",
+    "sass-loader": "^13.2.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "@fancyapps/ui": "^4.0.31",
+    "jquery": "^3.6.1",
+    "jquery-migrate": "^3.4.0",
+    "jsdom": "^20.0.3",
+    "request": "^2.88.2",
+    "swiper": "^8.4.5"
+  }
+}
